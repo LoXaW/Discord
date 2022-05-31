@@ -1,0 +1,141 @@
+html {
+    background-color: #161616;
+    overflow: hidden;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    overflow-y: scroll;
+}
+
+section.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    min-height: 70vh;
+    animation: fadeInSide 2s;
+}
+
+section.main form {
+    position:absolute;
+    top:10;
+    right:10;
+   }
+
+#submit {
+    padding:5px 15px; 
+    background:#21222b93;
+    color: #94a1b2; 
+    border:0 none;
+    cursor:pointer;
+    -webkit-border-radius: 5px;
+    border-radius: 5px; 
+    
+}
+
+#switch {
+    position:absolute;
+    top:10;
+    left:10;
+    font-size: 20px;
+}
+
+#repo {
+    position:absolute;
+    top:10;
+    right:10;
+    font-size: 20px;    
+}
+section.main #profile {
+    transform: translateY(60px);
+    width: 250px;
+    height: 250px;
+    border-radius: 100%;
+    object-fit: cover;
+    border: 10px solid #21222b93;
+    cursor: pointer;
+    margin-bottom: 40px;
+}
+
+section.main h1 {
+    top: 55%;
+    border-right: 2px solid rgba(138, 63, 63, 0.75);
+    white-space: nowrap;
+    overflow: hidden;
+    color: rgb(185, 185, 185);
+    font-size: 43px;
+    animation: typewriter 2s steps(44) 1s .99 normal both, blinkTextCursor 530ms steps(44) infinite normal;
+}
+
+section.main p {
+    
+    color: #94a1b2;
+    font-size: 23px;
+}
+
+section.main a {
+    color: #a6a8b8;
+    display: flex;
+    text-decoration: none;
+    margin: 5px 5px;
+    font-size: 45px;
+    transition: 0.2s all;
+}
+
+section.main a:hover {
+    transition: 1s all;
+    color: rgb(255, 255, 255);
+}
+
+section.main iframe {
+    transform: translateY(50px);
+    padding: 30px;
+}
+@keyframes typewriter {
+    from {
+        width: 0;
+    }
+    to {
+        width: 4em;
+    }
+}
+
+@keyframes blinkTextCursor {
+    from {
+        border-right-color: rgba(255, 255, 255, .75);
+    }
+    to {
+        border-right-color: transparent;
+    }
+}
+
+@keyframes fadeInSide {
+    from {
+        opacity: 0;
+        transform: translateY(-2px);
+        transform: translate3d(-50px, 0, 0)
+    }
+    to {
+        transform: translate3d(0, 0, 0);
+        opacity: 1
+    }
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #202020;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
